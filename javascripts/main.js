@@ -10,7 +10,7 @@ const addDinos = (array, div) => {
         <div class="card-body">
             <h5 class="card-title">${item.name}</h5>
             <div class="progress">
-            <div class="progress-bar" style="width: ${item.health}%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><p class="health-status">${item.health}%</p></div>
+            <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" style="width: ${item.health}%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><p class="health-status">${item.health}%</p></div>
         </div>
         <div class="button-section">
             <button type="button" id="pet-${index}" class="btn btn-outline-primary">Pet</button>

@@ -16,10 +16,7 @@ body{
 .graveyard{
     background-color: lightslategrey;
 }
-.progress-bar{
-    
-    background-color: green;
-}
+
 .button-section{
     display: flex;
     flex-flow: wrap;
@@ -29,7 +26,7 @@ body{
     margin:5px;
 }
 .img-container {
-    height: 200px;
+    height: 220px;
     background-size: cover;
     background-position: center;
   }
@@ -47,4 +44,11 @@ body{
     color: white;
     top:8px;
     text-align: center;
+}
+.adventureHeader{
+    margin-left: auto;
+    margin-right: auto;
+    text-emphasis: center;
+    text-decoration:underline gold;
+    text-transform: uppercase;
 }

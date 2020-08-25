@@ -16,7 +16,7 @@ const dinos = [
       age: 1,
       owner: 'Jacob',
       adventures: [],
-      health: 1,
+      health: 45,
       imageUrl: 'https://i.ebayimg.com/images/g/61UAAOSweNpdmtI2/s-l640.png'
     },
     {
@@ -26,7 +26,7 @@ const dinos = [
       age: 55,
       owner: 'Jacob',
       adventures: [],
-      health: 0,
+      health: 80,
       imageUrl: 'https://cdn.mos.cms.futurecdn.net/owYTb9X5fKpeBhgiaxD73b-320-80.jpg'
     },
     {
@@ -87,7 +87,7 @@ const dinos = [
       owner: 'Dr. T',
       adventures: [],
       health: 22,
-      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTOdrC7hlvBawFQ7g8vgwHcfQphX5WfeN2bth0dvc4M2oxNGdSD'
+      imageUrl: './images/bronto2.jpg'
     }
   ];
   

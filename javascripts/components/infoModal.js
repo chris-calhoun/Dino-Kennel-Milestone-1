@@ -21,9 +21,32 @@ const infoModal = (index)=>{
     <li class="dinoList"><h5>Age:</h5> ${item.age}</li>
     <li class="dinoList"><h5>Owner:</h5> ${item.owner}</li>
     <li class="dinoList"><h5>Health:</h5> ${item.health}</li>
-
 </div>
 </div>
+<table class="table">
+   <h2 class="adventureHeader">Adventures</h2>
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+    </tr>
+  </tbody>
+</table>
 <div class="modal-footer">
     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
     <button type="button" class="btn btn-primary">Save changes</button>
