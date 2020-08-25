@@ -1,6 +1,6 @@
-body{
+/* body{
     background-color: aqua;
-}
+} */
 .kennel{
     background-color: lightgreen;
 }
@@ -10,3 +10,12 @@ body{
 .graveyard{
     background-color: lightslategrey;
 }
+.progress-bar{
+    background-color: green;
+}
+
+.img-container {
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+  }
