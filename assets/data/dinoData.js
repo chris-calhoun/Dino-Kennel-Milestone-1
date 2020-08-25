@@ -7,7 +7,7 @@ const dinos = [
       owner: 'Jacob',
       adventures: [],
       health: 92,
-      imageUrl: 'https://www.fieldandstream.com/resizer/8xkluKAxQZsEHJKj6qwyU0mLhTo=/760x448/filters:focal(458x270:459x271)/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/TQFN3CD5DAEM4DL2ACD42ZJ5E4.png'
+      imageUrl: './images/trex.jpg'
     },
     {
       id: 'dino2',
@@ -16,7 +16,7 @@ const dinos = [
       age: 1,
       owner: 'Jacob',
       adventures: [],
-      health: 1,
+      health: 45,
       imageUrl: 'https://i.ebayimg.com/images/g/61UAAOSweNpdmtI2/s-l640.png'
     },
     {
@@ -26,7 +26,7 @@ const dinos = [
       age: 55,
       owner: 'Jacob',
       adventures: [],
-      health: 0,
+      health: 80,
       imageUrl: 'https://cdn.mos.cms.futurecdn.net/owYTb9X5fKpeBhgiaxD73b-320-80.jpg'
     },
     {
@@ -37,7 +37,7 @@ const dinos = [
       owner: 'Abbey',
       adventures: [],
       health: 100,
-      imageUrl: 'https://lh3.googleusercontent.com/proxy/_rJSL88ErOEvgHl5SInWOEolOdikwIMcKWPv9iqZzt3IUkD33WdG6d9qd8TmNJFSiszTXm7JeGQPocmB_BZErKxt__25LOpW75dmnVuy0nuY0PatX2cIYA-C'
+      imageUrl: './images/brontosaurus.jpg'
     },
     {
       id: 'dino5',
@@ -87,7 +87,7 @@ const dinos = [
       owner: 'Dr. T',
       adventures: [],
       health: 22,
-      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTOdrC7hlvBawFQ7g8vgwHcfQphX5WfeN2bth0dvc4M2oxNGdSD'
+      imageUrl: './images/bronto2.jpg'
     }
   ];
   
