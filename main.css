@@ -1,8 +1,14 @@
 body{
     background-color: aqua;
 }
+
+.card{
+    margin: 10px;
+}
 .kennel{
     background-color: lightgreen;
+    display: flex;
+    flex-flow: wrap;
 }
 .hospital{
     background-color: rgb(238, 119, 119);
@@ -10,3 +16,18 @@ body{
 .graveyard{
     background-color: lightslategrey;
 }
+.progress-bar{
+    background-color: green;
+}
+.button-section{
+    display: flex;
+    flex-flow: wrap;
+}
+.btn{
+    margin:5px;
+}
+.img-container {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+  }
