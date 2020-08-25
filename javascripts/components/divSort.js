@@ -3,10 +3,12 @@ import { addDinos } from './addDinos.js'
 
 
 const divSorter = () =>{
-    dinos.forEach((item)=>{
+    
+    dinos.forEach((item, index)=>{
         if(item.health < 50 && item.health > 1){
             hospital.push(item)
                 addDinos(hospital,'hospital')
+           
         }
         if(item.health > 50){
             kennel.push(item)
@@ -17,6 +19,7 @@ const divSorter = () =>{
             addDinos(graveyard, 'graveyard')
         }
     })
+    
 }
 
 
