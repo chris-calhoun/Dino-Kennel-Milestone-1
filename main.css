@@ -1,0 +1,12 @@
+body{
+    background-color: aqua;
+}
+.kennel{
+    background-color: lightgreen;
+}
+.hospital{
+    background-color: rgb(238, 119, 119);
+}
+.graveyard{
+    background-color: lightslategrey;
+}
