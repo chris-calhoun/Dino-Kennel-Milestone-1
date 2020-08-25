@@ -1,28 +1,6 @@
 import {dinos, adventures} from "./../assets/data/dinoData.js"
 
-const kennelArray= [{
-    name: "T-rex",
-    health: 80,
-    image: "./images/trex.jpg",
-},
-{
-    name: "T-rex",
-    health: 80,
-    image: "./images/trex.jpg",
-},
-{
-    name: "T-rex",
-    health: 80,
-    image: "./images/trex.jpg",
-}]
 
-const hospitalArray = []
- 
-const graveyardArray = []
-
-const renderAllDinos = ()=>{
-    return kennelArray
-}
 
 const addDinos = (array, div) => {
     $(`#${div}`).html('')
@@ -35,10 +13,13 @@ const addDinos = (array, div) => {
             <div class="progress">
             <div class="progress-bar" style="width: ${item.health}%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
-            <a href="#" id="pet-${index}" class="btn btn-primary">Pet</a>
-            <a href="#" id="feed-${index}" class="btn btn-primary">Feed</a>
-            <a href="#" id="adventure-${index}"class="btn btn-primary">Adventure</a>
-            <a href="#" id="delete-${index}" class="btn btn-primary">Delete</a>
+        <div class="button-section">
+
+            <a href="#" id="pet-${index}" class="btn btn-outline-primary">Pet</a>
+            <a href="#" id="feed-${index}" class="btn btn-outline-success">Feed</a>
+            <a href="#" id="adventure-${index}"class="btn btn-outline-warning">Adventure</a>
+            <a href="#" id="delete-${index}" class="btn btn-outline-danger">Delete</a>
+            </div>
             </div>
         </div>`)
 }
