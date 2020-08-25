@@ -5,7 +5,7 @@ import {dinos, adventures} from "./../assets/data/dinoData.js"
 const addDinos = (array, div) => {
     $(`#${div}`).html('')
     array.forEach((item, index)=> {
-         $("#kennel").append(`<div class="card" style="width: 18rem;">
+         $(`#${div}`).append(`<div class="card" style="width: 18rem;">
          <div class="img-container" style="background-image: url(${item.imageUrl})">
          </div>
         <div class="card-body">

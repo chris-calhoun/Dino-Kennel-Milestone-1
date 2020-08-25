@@ -7,7 +7,7 @@ const dinos = [
       owner: 'Jacob',
       adventures: [],
       health: 92,
-      imageUrl: 'https://www.fieldandstream.com/resizer/8xkluKAxQZsEHJKj6qwyU0mLhTo=/760x448/filters:focal(458x270:459x271)/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/TQFN3CD5DAEM4DL2ACD42ZJ5E4.png'
+      imageUrl: './images/trex.jpg'
     },
     {
       id: 'dino2',
@@ -37,7 +37,7 @@ const dinos = [
       owner: 'Abbey',
       adventures: [],
       health: 100,
-      imageUrl: 'https://lh3.googleusercontent.com/proxy/_rJSL88ErOEvgHl5SInWOEolOdikwIMcKWPv9iqZzt3IUkD33WdG6d9qd8TmNJFSiszTXm7JeGQPocmB_BZErKxt__25LOpW75dmnVuy0nuY0PatX2cIYA-C'
+      imageUrl: './images/brontosaurus.jpg'
     },
     {
       id: 'dino5',
