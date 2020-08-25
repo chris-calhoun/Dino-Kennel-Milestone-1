@@ -17,6 +17,7 @@ body{
     background-color: lightslategrey;
 }
 .progress-bar{
+    
     background-color: green;
 }
 .button-section{
@@ -32,3 +33,18 @@ body{
     background-size: cover;
     background-position: center;
   }
+
+  .dinoList{
+      list-style: none;
+      
+  }
+.modal-body{
+    display: flex;
+}
+
+.health-status{
+    position: relative;
+    color: white;
+    top:8px;
+    text-align: center;
+}

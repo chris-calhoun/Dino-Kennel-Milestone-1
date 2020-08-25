@@ -13,15 +13,14 @@ const infoModal = (index)=>{
     </button>
 </div>
 <div class="modal-body container-fluid">
-<div class="img-container col-md-7" style="background-image: url(${item.imageUrl})">
+<div class="img-container col-md-8 ml-auto" style="background-image: url(${item.imageUrl})">
 </div>
-<div class="dino-info col-md-4 ml-auto">
-
-<li class="dinoList">Name: ${item.name}</li>
-<li class="dinoList">Type: ${item.type}</li>
-<li class="dinoList">Age: ${item.age}</li>
-<li class="dinoList">Owner: ${item.owner}</li>
-<li class="dinoList">Health: ${item.health}</li>
+<div class="dino-info col-md-5 ml-auto">
+    <li class="dinoList"><h5>Name:</h5> ${item.name}</li>
+    <li class="dinoList"><h5>Type:</h5> ${item.type}</li>
+    <li class="dinoList"><h5>Age:</h5> ${item.age}</li>
+    <li class="dinoList"><h5>Owner:</h5> ${item.owner}</li>
+    <li class="dinoList"><h5>Health:</h5> ${item.health}</li>
 
 </div>
 </div>
