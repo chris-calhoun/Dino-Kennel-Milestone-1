@@ -12,9 +12,13 @@ body{
 }
 .hospital{
     background-color: rgb(238, 119, 119);
+    display: flex;
+    flex-flow: wrap;
 }
 .graveyard{
     background-color: lightslategrey;
+    display: flex;
+    flex-flow: wrap;
 }
 
 .button-section{

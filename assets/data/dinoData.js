@@ -143,8 +143,14 @@ const dinos = [
       healthHit: 60
     }
   ];
+  const kennel = []
+  const hospital = []
+  const graveyard = []
 
   export {
       dinos,
-      adventures
+      adventures,
+      kennel,
+      hospital,
+      graveyard
   }

@@ -1,9 +1,9 @@
-import { dinos, adventures } from '/../assets/data/dinoData.js'
+import { dinos } from '/../assets/data/dinoData.js'
 
-const infoModal = (index)=>{
-    dinos.forEach((item, index)=>{
-    $('#kennel').append(`
-    <div class="modal fade" id="exampleModal-${index}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+const infoModal = ()=>{
+    dinos.forEach((item)=>{
+    $('#modaltarget').append(`
+    <div class="modal fade" id="exampleModal-${item.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
     <div class="modal-content">
 <div class="modal-header">
