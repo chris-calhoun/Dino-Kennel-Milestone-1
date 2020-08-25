@@ -6,21 +6,15 @@ import { graveyard, hospital, kennel } from '../../assets/data/dinoData.js'
 
 
 const cardEvents = (array, index) => {
-    // Info Modal
-    $(`#info-${index}`).on('click', ()=>{
-       infoModal('kennel')
-        infoModal('graveyard')
-        infoModal('hospital')
-        // addDinos( kennel, 'kennel'[index])
-        // addDinos( hospital, 'hospital'[index]) 
-        // addDinos( graveyard, 'graveyard'[index]) 
-    })
+ 
     // FEED button
     $(`#feed-${index}`).on('click', ()=> {
       if(array[index].health < 100){
-          array[index].health += 5 }
-        
+         array[index].health += 5 
+         }
+       divSorter()
     })
+   
 
 }
 
@@ -45,6 +39,7 @@ const addDinos = (array, div) => {
               </button>
   
   `);
+  
   cardEvents(array, index)
     });
   };

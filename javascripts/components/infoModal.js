@@ -1,8 +1,8 @@
 import { dinos } from '/../assets/data/dinoData.js'
 
-const infoModal = (div)=>{
+const infoModal = ()=>{
     dinos.forEach((item)=>{
-    $(`#${div}`).append(`
+    $('#modaltarget').append(`
     <div class="modal fade" id="exampleModal-${item.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
     <div class="modal-content">
