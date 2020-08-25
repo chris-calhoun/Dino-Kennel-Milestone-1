@@ -1,27 +1,41 @@
+import { dinos, adventures } from '/../assets/data/dinoData.js'
 
-
-const infoModal = ()=>{
-    $('#infoModal').append(`
-    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
+const infoModal = (index)=>{
+    dinos.forEach((item, index)=>{
+    $('#kennel').append(`
+    <div class="modal fade" id="exampleModal-${index}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
-      </div>
+<div class="modal-header">
+    <h5 class="modal-title" id="exampleModalLabel">Dino Profile</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body container-fluid">
+<div class="img-container col-md-7" style="background-image: url(${item.imageUrl})">
+</div>
+<div class="dino-info col-md-4 ml-auto">
+
+<li class="dinoList">Name: ${item.name}</li>
+<li class="dinoList">Type: ${item.type}</li>
+<li class="dinoList">Age: ${item.age}</li>
+<li class="dinoList">Owner: ${item.owner}</li>
+<li class="dinoList">Health: ${item.health}</li>
+
+</div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    <button type="button" class="btn btn-primary">Save changes</button>
     </div>
-  </div>
-</div> `)
-}
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>`)
+})}
 
 export{
     infoModal
