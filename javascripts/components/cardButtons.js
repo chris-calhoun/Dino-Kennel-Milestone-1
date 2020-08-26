@@ -1,7 +1,31 @@
 
 import {hospital, kennel, graveyard} from "../../assets/data/dinoData.js";
 
-import { singleDino } from './addDinos.js'
+import { singleDino, randomID, addDinos } from './addDinos.js'
+
+
+const addDinoForm = () =>{
+    const name = $("#name").val();
+        const type = $("#type").val();
+        const age = $("#age").val();
+        const owner = $("#owner").val();
+        
+        const imageUrl = $("#imageUrl").val();
+    
+        kennel.push({
+            id: randomID(),
+            name: name,
+            type: type,
+            age: age,
+            owner: owner,
+            adventures: [],
+            health: 100,
+            imageUrl: imageUrl
+        });
+        addDinos(kennel, 'kennel')
+}
+
+
 
 const cardEvents = (array, index, item) => {
     // FEED\
@@ -72,8 +96,9 @@ const cardEvents = (array, index, item) => {
         $(`#card-${item.id}`).remove();
     })
 
+ 
 
 
   };
 
-  export { cardEvents }
+  export { cardEvents, addDinoForm }

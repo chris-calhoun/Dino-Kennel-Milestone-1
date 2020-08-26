@@ -56,3 +56,11 @@ body{
     text-decoration:underline gold;
     text-transform: uppercase;
 }
+
+.modal-body{
+    display: flex;
+    flex-direction: column;
+}
+.modalTitles{
+    margin: 5px;
+}
