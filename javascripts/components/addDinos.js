@@ -73,10 +73,7 @@ const addDinos = (array, div) => {
               </button>
   
   `);
-  if(item.health < 50 && item.health > 1){
-      $(`#progress-${item.id}`).removeClass('bg-success')
-      $(`#progress-${item.id}`).addClass('bg-warning')
-  }
+ 
   cardEvents(array, index, item)
   
     });
