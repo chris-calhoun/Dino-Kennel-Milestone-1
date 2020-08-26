@@ -7,19 +7,20 @@ const divSorter = () =>{
     dinos.forEach((item, index)=>{
         if(item.health < 50 && item.health > 1){
             hospital.push(item)
-                addDinos(hospital,'hospital')
            
         }
         if(item.health > 50){
             kennel.push(item)
-            addDinos(kennel,'kennel')
+            // addDinos(kennel,'kennel')
         }
        if(item.health < 1){
            graveyard.push(item)
-            addDinos(graveyard, 'graveyard')
+            
         }
     })
-    
+    addDinos(kennel,'kennel')
+    addDinos(graveyard, 'graveyard')
+    addDinos(hospital, 'hospital')
 }
 
 
