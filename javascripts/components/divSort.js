@@ -11,7 +11,7 @@ const divSorter = () =>{
         }
         if(item.health > 50){
             kennel.push(item)
-            // addDinos(kennel,'kennel')
+            
         }
        if(item.health < 1){
            graveyard.push(item)
