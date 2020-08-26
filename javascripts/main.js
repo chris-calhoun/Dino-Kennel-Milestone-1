@@ -6,8 +6,10 @@ import { infoModal } from "./components/infoModal.js"
 
 
 
+
 const init = () => {
  infoModal();
 divSorter();
+
 };
 init();

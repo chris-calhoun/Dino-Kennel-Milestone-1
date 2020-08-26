@@ -24,5 +24,4 @@ const divSorter = () =>{
 }
 
 
-
 export { divSorter }
