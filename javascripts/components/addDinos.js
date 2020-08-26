@@ -12,7 +12,15 @@ const cardEvents = (array, index, item) => {
     if(array[index].health < 100){
          array[index].health += 10 
       $(`#progressBar-${item.id}`).html(``)
-      $(`#progressBar-${item.id}`).html(` <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" style="width: ${item.health}%" id="progress-${index}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><p class="health-status">${item.health}%</p></div>`)
+      $(`#progressBar-${item.id}`).html(` <div class="progress-bar progress-bar-striped ${item.health > 50 ? "bg-success" : "bg-warning"} progress-bar-animated" style="width: ${item.health}%" id="progress-${index}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><p class="health-status">${item.health}%</p></div>`)
+      if(item.health < 50 && item.health > 1){
+        hospital.push(item)
+       
+    }
+    if(item.health > 50){
+        kennel.push(item)
+        
+    }
     }})
   
     // PET
@@ -20,12 +28,19 @@ const cardEvents = (array, index, item) => {
         if(array[index].health < 100){
              array[index].health += 5 
           $(`#progressBar-${item.id}`).html(``)
-          $(`#progressBar-${item.id}`).html(` <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" style="width: ${item.health}%" id="progress-${index}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><p class="health-status">${item.health}%</p></div>`)
-          if(array[index].health > 50){
-              $('#kennel').append(array[index])
-                }
+          $(`#progressBar-${item.id}`).html(` <div class="progress-bar progress-bar-striped ${item.health > 50 ? "bg-success" : "bg-warning"} progress-bar-animated" style="width: ${item.health}%" id="progress-${index}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><p class="health-status">${item.health}%</p></div>`)
+
+                // Current attempt not working
+
+        //   if(array[index].health < 50 && item.health > 1){
+        //     $(`#progress-${item.id}`).removeClass('bg-success')
+        //     $(`#progress-${item.id}`).addClass('bg-warning')
+        // }
+        
         }})
-    // DElETE
+    
+    
+        // DElETE
     $(`delete-${item.id}`).on('click', () =>{
         $(`#card-${item.id}`).html(``)
     }
@@ -58,7 +73,10 @@ const addDinos = (array, div) => {
               </button>
   
   `);
-  
+  if(item.health < 50 && item.health > 1){
+      $(`#progress-${item.id}`).removeClass('bg-success')
+      $(`#progress-${item.id}`).addClass('bg-warning')
+  }
   cardEvents(array, index, item)
   
     });
