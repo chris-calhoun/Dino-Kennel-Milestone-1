@@ -1,6 +1,7 @@
 
 import { infoModal } from "./infoModal.js";
-import { addDinos } from './addDinos.js'
+import { addDinos, singleDino } from './addDinos.js'
+import { kennel, dinos } from './../../assets/data/dinoData.js'
 const clickAdd = () =>{
     $('#submitForm').on('click', (e)=>{
     e.preventDefault()
@@ -32,8 +33,9 @@ const addDinoForm = () => {
       health: 100,
       imageUrl: imageUrl,
     });
+    
     addDinos(kennel, "kennel");
-    infoModal(dinos);
+    
   };
 
   export{ 

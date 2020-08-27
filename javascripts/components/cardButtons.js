@@ -1,5 +1,5 @@
 
-import { singleDino } from "./addDinos.js";
+import { singleDino, deadDino } from "./addDinos.js";
 import{ adventureRandomizer } from './adventuresList.js' 
 import {kennel, hospital, graveyard} from './../../assets/data/dinoData.js'
 
@@ -57,17 +57,16 @@ const petButton = (array, index, item) => {
   });
 };
 const adventureButton = (array, index, item) => {
-  
-
   $(`#adventure-${item.id}`).on("click", () => {
     let randomObj = adventureRandomizer();
     $(`#modalLink-${item.id}`).append(` <tr>
-          <th scope="row">${Date()}</th>
-          <th scope="row">${randomObj.title}</th>
+          <th class="date" scope="row">${Date()}</th>
+          <th class="activity" scope="row">${randomObj.title}</th>
          </tr>`);
     item.health -= randomObj.healthHit;
     if (item.health < 0) {
       item.health = 0;
+     
     }
     $(`#progressBar-${item.id}`).html(``);
     $(`#progressBar-${item.id}`).html(
@@ -89,11 +88,9 @@ const sorter = (array, item, index) => {
   if(array === kennel && item.health < 1  && boolVal) {
     graveyard.push(item);
     $(`.card-${item.id}`).remove();
-    $("#graveyard").append(singleDino(item));
+    $("#graveyard").append(deadDino(item));
     boolVal = false;
-    feedButton(array, index, item);
-    petButton(array, index, item)
-    adventureButton(array, index, item)
+  
   }
   if (array === kennel && item.health < 50 && item.health > 1 && boolVal) {
     hospital.push(item);
@@ -126,11 +123,9 @@ const sorter = (array, item, index) => {
   if (array === hospital && item.health < 1 && boolVal) {
     graveyard.push(item);
     $(`.card-${item.id}`).remove();
-    $("#graveyard").append(singleDino(item));
+    $("#graveyard").append(deadDino(item));
     boolVal = false;
-    feedButton(array, index, item);
-    petButton(array, index, item)
-    adventureButton(array, index, item)
+    
   }
   
 };

@@ -1,26 +1,49 @@
 body{
-    background-color: rgb(234, 235, 220);
+    background-color: #EDF6F9;
     text-align: center;
+    font-family: 'Special Elite', cursive;
 }
 
 .card{
     margin: 10px;
 }
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.kennelHead, .graveyardHead, .hospitalHead {
+    font-size: 100px;
+}
+
 .kennel{
-    background-color: lightgreen;
+    background-color: #607744 ;
     display: flex;
     flex-flow: wrap; 
+    justify-content: center;
+    border: black 10px solid;
+    border-radius: 3%;
+}
+.health-status{
+    margin-top: 4px;
 }
 
 .hospital{
-    background-color: rgb(238, 119, 119);
+    background-color: #D52941;
     display: flex;
     flex-flow: wrap;
+    justify-content: center;
+    border: black 10px solid;
+    border-radius: 3%;
 }
 .graveyard{
-    background-color: lightslategrey;
+    background-color: #696773 ;
     display: flex;
     flex-flow: wrap;
+    justify-content: center;
+    border: black 10px solid;
+    border-radius: 3%;
 }
 
 .button-section{
@@ -40,6 +63,12 @@ body{
     height: 300px;
     background-size: cover;
     background-position: center;
+  }
+  .img-container-death {
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    object-fit: contain;
   }
 .dinoList{
       list-style: none;
@@ -74,4 +103,11 @@ body{
 }
 .modalTitles{
     margin: 5px;
+}
+.date{
+    width: 30%;
+    font-size: 10px;
+}
+.activity{
+    font-size: 20px;
 }
