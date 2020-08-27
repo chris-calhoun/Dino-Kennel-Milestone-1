@@ -41,7 +41,8 @@ const deadDino = (item) => {
    <div class="infoButton">
    <button type="button" id="info-${item.id}" class="btn btn-outline-info" data-toggle="modal" data-target="#exampleModal-${item.id}">
    Info
-   </button></div>
+   </button>
+   </div>
        </div>
        </div>
   `;

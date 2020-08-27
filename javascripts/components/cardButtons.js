@@ -57,8 +57,6 @@ const petButton = (array, index, item) => {
   });
 };
 const adventureButton = (array, index, item) => {
-  
-
   $(`#adventure-${item.id}`).on("click", () => {
     let randomObj = adventureRandomizer();
     $(`#modalLink-${item.id}`).append(` <tr>
