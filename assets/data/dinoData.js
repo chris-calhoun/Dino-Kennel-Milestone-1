@@ -66,7 +66,7 @@ const dinos = [
       age: 100,
       owner: 'Abbey',
       adventures: [],
-      health: 0,
+      health: 30,
       imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/81Wsvp2M7iL._AC_SX425_.jpg'
     },
     {
