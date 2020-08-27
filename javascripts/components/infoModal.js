@@ -1,7 +1,7 @@
 import { dinos } from '/../assets/data/dinoData.js'
 
-const infoModal = ()=>{
-    dinos.forEach((item)=>{
+const infoModal = (array)=>{
+    array.forEach((item)=>{
     $('#modaltarget').append(`
     <div class="modal fade" id="exampleModal-${item.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -13,14 +13,13 @@ const infoModal = ()=>{
     </button>
 </div>
 <div class="modal-body container-fluid">
-<div class="img-container col-md-8 ml-auto" style="background-image: url(${item.imageUrl})">
+<div class="img-container-modal col-md-8 ml-auto" style="background-image: url(${item.imageUrl})">
 </div>
 <div class="dino-info col-md-5 ml-auto">
-    <li class="dinoList"><h5>Name:</h5> ${item.name}</li>
-    <li class="dinoList"><h5>Type:</h5> ${item.type}</li>
-    <li class="dinoList"><h5>Age:</h5> ${item.age}</li>
-    <li class="dinoList"><h5>Owner:</h5> ${item.owner}</li>
-    <li class="dinoList"><h5>Health:</h5> ${item.health}</li>
+    <li class="dinoList"><h5 class="boldModal">Name:</h5> ${item.name}</li>
+    <li class="dinoList"><h5 class="boldModal">Type:</h5> ${item.type}</li>
+    <li class="dinoList"><h5 class="boldModal">Age:</h5> ${item.age}</li>
+    <li class="dinoList"><h5 class="boldModal">Owner:</h5> ${item.owner}</li>
 </div>
 </div>
 <table class="table">
@@ -31,20 +30,8 @@ const infoModal = ()=>{
       <th scope="col">Type</th>
     </tr>
   </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-    </tr>
+  <tbody id="modalLink-${item.id}">
+   
   </tbody>
 </table>
 <div class="modal-footer">
@@ -57,6 +44,7 @@ const infoModal = ()=>{
 </div>
 </div>
 </div>`)
+
 })}
 
 export{

@@ -1,6 +1,6 @@
 import { dinos, kennel, hospital, graveyard } from './../../assets/data/dinoData.js'
 import { addDinos } from './addDinos.js'
-
+import { infoModal } from './infoModal.js'
 
 const divSorter = () =>{
     
@@ -21,6 +21,7 @@ const divSorter = () =>{
     addDinos(kennel,'kennel')
     addDinos(graveyard, 'graveyard')
     addDinos(hospital, 'hospital')
+    infoModal(dinos)
 }
 
 

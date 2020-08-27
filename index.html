@@ -13,12 +13,64 @@
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <div id="allItems">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+      Add Dino
+    </button>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Add Your Dinosaur Here</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body1">
+            <div class="input-group mb-3">
+              <h4 class="modalTitles">Dino's Name</h4>
+              <input id="name" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+            </div>
+            <div class="input-group mb-3">
+              <h4 class="modalTitles">Type</h4>
+              <input id="type" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+            </div>
+            <div class="input-group mb-3">
+              <h4 class="modalTitles">Age</h4>
+              <input id="age" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+            </div>
+            <div class="input-group mb-3">
+              <h4 class="modalTitles">Owner</h4>
+              <input id="owner"type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+            </div>
+           
+            <div class="input-group mb-3">
+              <h4 class="modalTitles">ImageUrl</h4>
+              <input id="imageUrl"type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary" data-dismiss="modal" id="submitForm">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="headerContainer">
+      <h1 class="kennelHead">The Kennel</h1>
+    </div>
       <div class="kennel container-fluid" id="kennel"></div>
       <div id="modaltarget"></div>
+      <div class="headerContainer">
+        <h1 class="hospitalHead">The Hospital</h1>
+      </div>
       <div class="hospital container-fluid" id="hospital"></div>
+      <div class="headerContainer">
+        <h1 class="graveyardHead">The Graveyard</h1>
+      </div>
       <div class="graveyard container-fluid" id="graveyard"></div>
-  </div>
+  
     
     <script
       src="https://code.jquery.com/jquery-3.5.1.min.js"
