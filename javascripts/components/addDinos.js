@@ -76,7 +76,7 @@ const addDinos = (array, div) => {
               </div>
               </div>
   `);
-  
+  infoModal(array);
   feedButton(array, index, item);
   petButton(array, index, item)
   adventureButton(array, index, item)

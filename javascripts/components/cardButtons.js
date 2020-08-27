@@ -62,8 +62,8 @@ const adventureButton = (array, index, item) => {
   $(`#adventure-${item.id}`).on("click", () => {
     let randomObj = adventureRandomizer();
     $(`#modalLink-${item.id}`).append(` <tr>
-          <th scope="row">${Date()}</th>
-          <th scope="row">${randomObj.title}</th>
+          <th class="date" scope="row">${Date()}</th>
+          <th class="activity" scope="row">${randomObj.title}</th>
          </tr>`);
     item.health -= randomObj.healthHit;
     if (item.health < 0) {
