@@ -1,5 +1,6 @@
 body{
-    background-color: aqua;
+    background-color: rgb(234, 235, 220);
+    text-align: center;
 }
 
 .card{
@@ -8,8 +9,9 @@ body{
 .kennel{
     background-color: lightgreen;
     display: flex;
-    flex-flow: wrap;
+    flex-flow: wrap; 
 }
+
 .hospital{
     background-color: rgb(238, 119, 119);
     display: flex;
@@ -34,11 +36,20 @@ body{
     background-size: cover;
     background-position: center;
   }
-
-  .dinoList{
-      list-style: none;
-      
+  .img-container-modal {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
   }
+.dinoList{
+      list-style: none;
+      margin: 5px;
+      
+}
+.boldModal{
+    text-decoration: underline;
+    font-size: x-large;
+}
 .modal-body{
     display: flex;
 }
@@ -57,7 +68,7 @@ body{
     text-transform: uppercase;
 }
 
-.modal-body{
+.modal-body1{
     display: flex;
     flex-direction: column;
 }

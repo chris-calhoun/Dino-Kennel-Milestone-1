@@ -37,7 +37,7 @@ const dinos = [
       owner: 'Abbey',
       adventures: [],
       health: 100,
-      imageUrl: './images/brontosaurus.jpg'
+      imageUrl: './images/barry.jpeg'
     },
     {
       id: 'dino5',
