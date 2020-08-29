@@ -95,7 +95,7 @@ const dinos = [
     {
       id: 'adventure1',
       title: 'BRAWL',
-      healthHit: 50
+      healthHit: 40
     },
     {
       id: 'adventure2',
@@ -115,7 +115,7 @@ const dinos = [
     {
       id: 'adventure5',
       title: 'Baking',
-      healthHit: 70
+      healthHit: 30
     },
     {
       id: 'adventure6',
@@ -125,22 +125,22 @@ const dinos = [
     {
       id: 'adventure7',
       title: 'Underwater Basket Weaving',
-      healthHit: 99
+      healthHit: 25
     },
     {
       id: 'adventure8',
       title: 'Surfing',
-      healthHit: 39
+      healthHit: 22
     },
     {
       id: 'adventure9',
       title: 'Fishing',
-      healthHit: 23
+      healthHit: 14
     },
     {
       id: 'adventure10',
       title: 'Shot from a cannon',
-      healthHit: 60
+      healthHit: 16
     }
   ];
   const kennel = []

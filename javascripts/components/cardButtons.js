@@ -62,6 +62,7 @@ const adventureButton = (array, index, item) => {
     $(`#modalLink-${item.id}`).append(` <tr>
           <th class="date" scope="row">${Date()}</th>
           <th class="activity" scope="row">${randomObj.title}</th>
+          <th class="health" scope="row">-${randomObj.healthHit}</th>
          </tr>`);
     item.health -= randomObj.healthHit;
     if (item.health < 0) {

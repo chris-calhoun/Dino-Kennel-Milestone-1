@@ -28,6 +28,7 @@ const infoModal = (array)=>{
     <tr>
       <th scope="col">Date</th>
       <th scope="col">Type</th>
+      <th scope="col">Health Hit</th>
     </tr>
   </thead>
   <tbody id="modalLink-${item.id}">
