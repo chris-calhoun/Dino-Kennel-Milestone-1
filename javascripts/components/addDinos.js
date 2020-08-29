@@ -19,6 +19,7 @@ const singleDino = (item) => {
      <button type="button" id="info-${item.id}" class="btn btn-outline-info" data-toggle="modal" data-target="#exampleModal-${item.id}">
      Info
      </button></div>
+     <div id="adventure-alert-${item.id}"></div>
      </div>
      </div>
 `;
