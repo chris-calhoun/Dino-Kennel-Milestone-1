@@ -1,0 +1,132 @@
+body{
+    background-color: #EDF6F9;
+    text-align: center;
+    font-family: 'Special Elite', cursive;
+    justify-content: center;
+}
+
+.card{
+    margin: 10px;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.kennelHead, .graveyardHead, .hospitalHead {
+    font-size: 70px;
+    color: #a8201a;
+    margin: 10px;
+    text-decoration: underline;
+}
+
+.kennel{
+    background-color: #2a9134 ;
+    display: flex;
+    flex-flow: wrap; 
+    justify-content: center;
+    border: black 10px solid;
+    border-radius: 3%;
+}
+.health-status{
+    margin-top: 4px;
+}
+
+.hospital{
+    background-color: #f71735;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    border: black 10px solid;
+    border-radius: 3%;
+}
+.graveyard{
+    background-color: #696773 ;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    border: black 10px solid;
+    border-radius: 3%;
+}
+
+.button-section{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+.btn{
+    margin:5px;
+}
+.img-container {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+  }
+  .modal-image{
+      object-fit: contain;
+      width: 200px;
+      height:200px;
+  }
+  .modal-image-container{
+      width: 110%;
+  }
+ 
+  .img-container-death {
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    object-fit: contain;
+  }
+.dinoList{
+      list-style: none;
+      margin: 5px;
+      
+}
+.boldModal{
+    text-decoration: underline;
+    font-size: x-large;
+}
+.modal-body{
+    display: flex;
+}
+
+.health-status{
+    position: relative;
+    color: white;
+    top:8px;
+    text-align: center;
+}
+.adventureHeader{
+    margin-left: auto;
+    margin-right: auto;
+    text-emphasis: center;
+    text-decoration:underline gold;
+    text-transform: uppercase;
+}
+
+.modal-body1{
+    display: flex;
+    flex-direction: column;
+}
+.modalTitles{
+    margin: 5px;
+}
+.date{
+    width: 30%;
+    font-size: 10px;
+}
+.activity{
+    font-size: 20px;
+}
+
+.form-control{
+    margin: 5px 20px 0px 5px;
+}
+.modalTitles{
+    padding-top: 4px;
+}
+
+.btn-block{
+    background-color: #284b63;
+}
