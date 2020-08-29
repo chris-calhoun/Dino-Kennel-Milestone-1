@@ -16,10 +16,13 @@ body{
 }
 .kennelHead, .graveyardHead, .hospitalHead {
     font-size: 70px;
+    color: #a8201a;
+    margin: 10px;
+    text-decoration: underline;
 }
 
 .kennel{
-    background-color: #607744 ;
+    background-color: #2a9134 ;
     display: flex;
     flex-flow: wrap; 
     justify-content: center;
@@ -31,7 +34,7 @@ body{
 }
 
 .hospital{
-    background-color: #D52941;
+    background-color: #f71735;
     display: flex;
     flex-flow: wrap;
     justify-content: center;
@@ -117,4 +120,13 @@ body{
     font-size: 20px;
 }
 
-.graveyardHead
+.form-control{
+    margin: 5px 20px 0px 5px;
+}
+.modalTitles{
+    padding-top: 4px;
+}
+
+.btn-block{
+    background-color: #284b63;
+}
