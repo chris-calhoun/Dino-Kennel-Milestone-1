@@ -11,7 +11,7 @@ const clickAdd = () =>{
 }
 
 const randomID = () => {
-    const random = [Math.floor(Math.random() * 100)];
+    const random = [Math.floor(Math.random() * 1000)];
     return random;
   };
 
@@ -25,13 +25,13 @@ const addDinoForm = () => {
   
     kennel.push({
       id: randomID(),
-      name: name,
-      type: type,
-      age: age,
-      owner: owner,
+      name,
+      type,
+      age,
+      owner,
       adventures: [],
       health: 100,
-      imageUrl: imageUrl,
+      imageUrl,
     });
     
     addDinos(kennel, "kennel");

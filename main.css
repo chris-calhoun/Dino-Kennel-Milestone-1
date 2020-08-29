@@ -2,6 +2,7 @@ body{
     background-color: #EDF6F9;
     text-align: center;
     font-family: 'Special Elite', cursive;
+    justify-content: center;
 }
 
 .card{
@@ -14,11 +15,14 @@ body{
     
 }
 .kennelHead, .graveyardHead, .hospitalHead {
-    font-size: 100px;
+    font-size: 70px;
+    color: #a8201a;
+    margin: 10px;
+    text-decoration: underline;
 }
 
 .kennel{
-    background-color: #607744 ;
+    background-color: #2a9134 ;
     display: flex;
     flex-flow: wrap; 
     justify-content: center;
@@ -30,7 +34,7 @@ body{
 }
 
 .hospital{
-    background-color: #D52941;
+    background-color: #f71735;
     display: flex;
     flex-flow: wrap;
     justify-content: center;
@@ -59,11 +63,15 @@ body{
     background-size: cover;
     background-position: center;
   }
-  .img-container-modal {
-    height: 300px;
-    background-size: cover;
-    background-position: center;
+  .modal-image{
+      object-fit: contain;
+      width: 200px;
+      height:200px;
   }
+  .modal-image-container{
+      width: 110%;
+  }
+ 
   .img-container-death {
     height: 150px;
     background-size: cover;
@@ -110,4 +118,15 @@ body{
 }
 .activity{
     font-size: 20px;
+}
+
+.form-control{
+    margin: 5px 20px 0px 5px;
+}
+.modalTitles{
+    padding-top: 4px;
+}
+
+.btn-block{
+    background-color: #284b63;
 }
