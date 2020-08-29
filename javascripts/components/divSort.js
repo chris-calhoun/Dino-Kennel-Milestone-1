@@ -2,6 +2,8 @@ import { dinos, kennel, hospital, graveyard } from './../../assets/data/dinoData
 import { addDinos } from './addDinos.js'
 import { infoModal } from './infoModal.js'
 import { sorter } from './cardButtons.js'
+
+
 const divSorter = () =>{
     
     dinos.forEach((item, index)=>{
