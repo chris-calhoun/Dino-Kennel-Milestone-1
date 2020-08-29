@@ -1,7 +1,7 @@
 import { dinos, kennel, hospital, graveyard } from './../../assets/data/dinoData.js'
 import { addDinos } from './addDinos.js'
 import { infoModal } from './infoModal.js'
-
+import { sorter } from './cardButtons.js'
 const divSorter = () =>{
     
     dinos.forEach((item, index)=>{
@@ -22,6 +22,7 @@ const divSorter = () =>{
     addDinos(graveyard, 'graveyard')
     addDinos(hospital, 'hospital')
     infoModal(dinos)
+    
 }
 
 

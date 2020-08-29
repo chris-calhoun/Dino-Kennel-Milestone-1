@@ -4,7 +4,7 @@ import { kennel, hospital, graveyard } from "./../../assets/data/dinoData.js";
 
 import { infoModal } from "./infoModal.js";
 
-const feedButton = (array, index, item) => {
+const feedButton = (array,item) => {
   $(`#feed-${item.id}`).on("click", () => {
     if (item.health < 100) {
       item.health += 10;
@@ -17,7 +17,7 @@ const feedButton = (array, index, item) => {
           item.health > 50 ? "bg-success" : "bg-warning"
         } progress-bar-animated" style="width: ${
           item.health
-        }%" id="progress-${index}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><p class="health-status">${
+        }%" id="progress-${item.id}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><p class="health-status">${
           item.health
         }%</p></div>`
       );
@@ -27,12 +27,12 @@ const feedButton = (array, index, item) => {
           item.health > 50 ? "bg-success" : "bg-warning"
         } progress-bar-animated" style="width: ${
           item.health
-        }%" id="progress-${index}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><p class="health-status">${
+        }%" id="progress-${item.id}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><p class="health-status">${
           item.health
         }%</p></div>`
       );
 
-      sorter(array, item, index);
+      sorter(array, item);
     }
     infoModal(array);
   });
@@ -42,7 +42,7 @@ const feedButton = (array, index, item) => {
     $(`#card-${item.id}`).remove();
   });
 };
-const petButton = (array, index, item) => {
+const petButton = (array,item) => {
   $(`#pet-${item.id}`).on("click", () => {
     if (item.health < 100) {
       item.health += 5;
@@ -55,7 +55,7 @@ const petButton = (array, index, item) => {
           item.health > 50 ? "bg-success" : "bg-warning"
         } progress-bar-animated" style="width: ${
           item.health
-        }%" id="progress-${index}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><p class="health-status">${
+        }%" id="progress-${item.id}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><p class="health-status">${
           item.health
         }%</p></div>`
       );
@@ -65,17 +65,17 @@ const petButton = (array, index, item) => {
           item.health > 50 ? "bg-success" : "bg-warning"
         } progress-bar-animated" style="width: ${
           item.health
-        }%" id="progress-${index}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><p class="health-status">${
+        }%" id="progress-${item.id}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><p class="health-status">${
           item.health
         }%</p></div>`
       );
-      sorter(array, item, index);
+      sorter(array, item);
 
       infoModal(array);
     }
   });
 };
-const adventureButton = (array, index, item) => {
+const adventureButton = (array, item) => {
   $(`#adventure-${item.id}`).on("click", () => {
     let randomObj = adventureRandomizer();
     $(`#modalLink-${item.id}`).append(` <tr>
@@ -99,7 +99,7 @@ const adventureButton = (array, index, item) => {
         item.health > 50 ? "bg-success" : "bg-warning"
       } progress-bar-animated" style="width: ${
         item.health
-      }%" id="progress-${index}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><p class="health-status">${
+      }%" id="progress-${item.id}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><p class="health-status">${
         item.health
       }%</p></div>`
     );
@@ -109,57 +109,56 @@ const adventureButton = (array, index, item) => {
         item.health > 50 ? "bg-success" : "bg-warning"
       } progress-bar-animated" style="width: ${
         item.health
-      }%" id="progress-${index}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><p class="health-status">${
+      }%" id="progress-${item.id}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><p class="health-status">${
         item.health
       }%</p></div>`
     );
-    sorter(array, item, index);
+    sorter(array, item);
     infoModal(array);
   });
 };
 
-const sorter = (array, item, index) => {
-  let boolVal = true;
-  if (array === kennel && item.health < 1 && boolVal) {
+const sorter = (array, item) => {
+  
+  if (array === kennel && item.health < 1) {
     graveyard.push(item);
     $(`.card-${item.id}`).remove();
     $("#graveyard").append(deadDino(item));
-    boolVal = false;
+    
   }
-  if (array === kennel && item.health < 50 && item.health > 1 && boolVal) {
+  if (array === kennel && item.health < 50 && item.health > 1) {
     hospital.push(item);
     $(`#card-${item.id}`).remove();
     $("#hospital").append(singleDino(item));
-    boolVal = false;
-    feedButton(array, index, item);
-    petButton(array, index, item);
-    adventureButton(array, index, item);
+    
+    feedButton(array,  item);
+    petButton(array, item);
+    adventureButton(array, item);
   }
-  if (array === graveyard && item.health > 1 && boolVal) {
+  if (array === graveyard && item.health > 1) {
     hospital.push(item);
     $(`.card-${item.id}`).remove();
     $("#hospital").append(singleDino(item));
-    boolVal = false;
-    feedButton(array, index, item);
-    petButton(array, index, item);
-    adventureButton(array, index, item);
+    
+    feedButton(array,item);
+    petButton(array,item);
+    adventureButton(array,item);
   }
 
-  if (array === hospital && item.health > 50 && boolVal) {
+  if (array === hospital && item.health > 50) {
     kennel.push(item);
     $(`.card-${item.id}`).remove();
     $("#kennel").append(singleDino(item));
-    boolVal = false;
-    feedButton(array, index, item);
-    petButton(array, index, item);
-    adventureButton(array, index, item);
+    feedButton(array, item);
+    petButton(array, item);
+    adventureButton(array, item);
   }
-  if (array === hospital && item.health < 1 && boolVal) {
+  if (array === hospital && item.health < 1) {
     graveyard.push(item);
     $(`.card-${item.id}`).remove();
     $("#graveyard").append(deadDino(item));
-    boolVal = false;
+    
   }
 };
 
-export { feedButton, petButton, adventureButton };
+export { feedButton, petButton, adventureButton, sorter };

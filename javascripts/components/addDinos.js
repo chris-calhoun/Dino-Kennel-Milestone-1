@@ -1,7 +1,8 @@
-import { feedButton, petButton, adventureButton } from "./cardButtons.js";
-import { dinos } from "./../../assets/data/dinoData.js"
+import { feedButton, petButton, adventureButton, sorter } from "./cardButtons.js";
+
 import { infoModal } from "./infoModal.js";
-const singleDino = (item) => {
+import { divSorter } from "./divSort.js";
+const singleDino = (item, array) => {
   let dinoString = `<div class="card card-${item.id}" id="card-${item.id}" style="width: 18rem;">
   <div class="img-container" style="background-image: url(${item.imageUrl})">
   </div>
@@ -23,7 +24,10 @@ const singleDino = (item) => {
      </div>
      </div>
 `;
-
+  feedButton(array, item);
+  petButton(array,item);
+  adventureButton(array,item);
+  sorter(array, item)
   return dinoString;
   
 };
@@ -80,18 +84,14 @@ const addDinos = (array, div) => {
               </div>
   `);
   infoModal(array);
-  feedButton(array, index, item);
-  petButton(array, index, item)
-  adventureButton(array, index, item)
+  feedButton(array, item);
+  petButton(array, item)
+  adventureButton(array, item)
     ;
   });
   
 };
-const randomID =()=>{
-   const random = [Math.floor(Math.random() * 100)]
-   return random
-   
-}
+
 
 
    
@@ -99,4 +99,4 @@ const randomID =()=>{
 
 
 
-export { addDinos, singleDino, randomID, deadDino };
+export { addDinos, singleDino, deadDino };
