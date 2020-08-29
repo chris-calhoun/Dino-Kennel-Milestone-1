@@ -12,6 +12,16 @@ const feedButton = (array, index, item) => {
       if (item.health > 100) {
         item.health = 100;
       }
+      $(`#progressBar-${item.id}-modal`).html(``);
+      $(`#progressBar-${item.id}-modal`).html(
+        ` <div class="progress-bar progress-bar-striped ${
+          item.health > 50 ? "bg-success" : "bg-warning"
+        } progress-bar-animated" style="width: ${
+          item.health
+        }%" id="progress-${index}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><p class="health-status">${
+          item.health
+        }%</p></div>`
+      )
       $(`#progressBar-${item.id}`).html(``);
       $(`#progressBar-${item.id}`).html(
         ` <div class="progress-bar progress-bar-striped ${
@@ -40,6 +50,16 @@ const petButton = (array, index, item) => {
       if (item.health > 100) {
         item.health = 100;
       }
+      $(`#progressBar-${item.id}-modal`).html(``);
+      $(`#progressBar-${item.id}-modal`).html(
+        ` <div class="progress-bar progress-bar-striped ${
+          item.health > 50 ? "bg-success" : "bg-warning"
+        } progress-bar-animated" style="width: ${
+          item.health
+        }%" id="progress-${index}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><p class="health-status">${
+          item.health
+        }%</p></div>`
+      )
       $(`#progressBar-${item.id}`).html(``);
       $(`#progressBar-${item.id}`).html(
         ` <div class="progress-bar progress-bar-striped ${
@@ -69,6 +89,16 @@ const adventureButton = (array, index, item) => {
       item.health = 0;
      
     }
+    $(`#progressBar-${item.id}-modal`).html(``);
+      $(`#progressBar-${item.id}-modal`).html(
+        ` <div class="progress-bar progress-bar-striped ${
+          item.health > 50 ? "bg-success" : "bg-warning"
+        } progress-bar-animated" style="width: ${
+          item.health
+        }%" id="progress-${index}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><p class="health-status">${
+          item.health
+        }%</p></div>`
+      )
     $(`#progressBar-${item.id}`).html(``);
     $(`#progressBar-${item.id}`).html(
       ` <div class="progress-bar progress-bar-striped ${

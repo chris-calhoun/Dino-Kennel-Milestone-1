@@ -11,7 +11,7 @@ const clickAdd = () =>{
 }
 
 const randomID = () => {
-    const random = [Math.floor(Math.random() * 100)];
+    const random = [Math.floor(Math.random() * 1000)];
     return random;
   };
 
