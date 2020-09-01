@@ -18,8 +18,8 @@ The motivation was for us to showcase all the skills we had learned with Vanilla
 
 
 ## Screenshots
-![Screen Shot 2020-08-27 at 1 53 41 PM](https://user-images.githubusercontent.com/66916708/91484096-50ed5880-e86e-11ea-8a2d-bb4b643e7d34.png)
-![Screen Shot 2020-08-27 at 1 56 22 PM](https://user-images.githubusercontent.com/66916708/91484144-62366500-e86e-11ea-931f-f435a25df0b6.png)
+![Screen Shot 2020-09-01 at 12 03 40 PM (3)](https://user-images.githubusercontent.com/66916708/91884343-7f42ad80-ec4b-11ea-9bff-f6ac0c0f6b4c.png)
+![Screen Shot 2020-09-01 at 12 04 51 PM](https://user-images.githubusercontent.com/66916708/91884382-8ff32380-ec4b-11ea-9357-20ea7e85c4ed.png)
 
 
 ## Tech/Framwork
