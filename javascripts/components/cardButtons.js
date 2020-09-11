@@ -40,6 +40,7 @@ const feedButton = (array,item) => {
 
   $(`#delete-${item.id}`).on("click", () => {
     $(`#card-${item.id}`).remove();
+    array.splice(`#card-${item.id}`, 1)
   });
 };
 const petButton = (array,item) => {
